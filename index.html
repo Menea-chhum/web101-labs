@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCloud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body style="padding-top: 80px;">
+
+    <nav class="navbar navbar-expand-lg bg-white fixed-top ">
+        <div class="container-fluid border-bottom ">
+            <!-- <a class="navbar-brand fw-bold fs-5" href="#">MediCloud</a> -->
+            <a class="navbar-brand d-flex align-items-center fw-bold fs-4" href="#">
+                <span class="logo-icon me-2">M</span>
+                MediCloud
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MediCloud</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 fw-bold " aria-current="page" href="#feature">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 fw-bold" href="#howItWork">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 fw-bold" href="#testimonails">Testimonails</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 fw-bold"
+                                style="--bs-nav-link-color: #F7815E; --bs-nav-link-hover-color: #F7815E;"
+                                href="#faq">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button type="button" class="btn btn-custom fw-bold my-2">Get a demo</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="copy">
+                        <div class="text-hero">
+                            <button type="button" class="btn btn-hero-custom fw-bold my-1">🛡️HIPPA compliants & secure
+                            </button>
+                        </div>
+                        <div class="text-hero-bold fs-1">
+                            Run Your Virtual <br> Clinic Effortlessly
+                        </div>
+                        <div class="text-hero-regular">
+                            All-in-one telehealth platform designed for modern practices. Manage patients, clinical
+                            notes, and secure HD video consultaions in one unified workspace.
+                        </div>
+                        <div class="cta mt-4">
+                            <a href="#" class="btn btn-custom fw-bold my-2">Get a demo</a>
+                            <!-- <button type="button" class="btn btn-custom fw-bold my-2">Get a demo</button> -->
+                            <!-- <button type="button" class="btn btn-outline-custom">Take a Quick Tour</button> -->
+                            <a href="#" class="btn btn-outline-custom">Take a Quick Tour</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-end">
+                    <div class="doctor-container">
+                        <img src="image/dr-img.png" class="img-fluid doctor-img" alt="Doctor">
+                        <button class="floating-btn ehr">EHR</button>
+                        <button class="floating-btn patient">Patients Experience</button>
+                        <button class="floating-btn billing">Billing and Payments</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Partner Logos -->
+        <section class=" py-7 Partner">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-4">
+                        <h2 class="mb-7">Trusted by</h2>
+                        <p class="mb-7 small">
+                            We safeguard your practice with full security and HIPAA compliance.
+                        </p>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-6 logos">
+                        <img src="image/logo-1.svg" class="img-fluid opacity-75">
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-6 logos">
+                        <img src="image/logo-2.svg" class="img-fluid opacity-75">
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-6 logos">
+                        <img src="image/logo-3.svg" class="img-fluid opacity-75">
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-6 logos">
+                        <img src="image/logo-4.svg" class="img-fluid opacity-75">
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- feature  -->
+        <section class=" py-7 feature" id="feature">
+            <h1 class="text-center">Clinical Excellence Intergrated</h1>
+            <p class="text-center">Everything you need to provide top-tier care from anywhere in the world</p>
+            <div class="container">
+                <!-- Row 1 -->
+                <div class="row Row">
+                    <div class="col-sm-4 mb-3 mb-sm-0 pb-4">
+                        <div class="card h-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                class="bi bi-camera-video pt-1 ps-3" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M0 5a2 2 0 0 1 2-2h7.5a2 2 0 0 1 1.983 1.738l3.11-1.382A1 1 0 0 1 16 4.269v7.462a1 1 0 0 1-1.406.913l-3.111-1.382A2 2 0 0 1 9.5 13H2a2 2 0 0 1-2-2zm11.5 5.175 3.5 1.556V4.269l-3.5 1.556zM2 4a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h7.5a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1z" />
+                            </svg>
+                            <div class="card-body">
+                                <h4 class="card-text">Video Consultaions</h4>
+                                <p class="card-text-regular">HD, peer-to-peer encrypted video calls with built-in
+                                    waiting
+                                    rooms
+                                    and screen sharing.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mb-3 mb-sm-0 pb-4">
+                        <div class="card h-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                class="bi bi-calendar-check pt-1 ps-3" viewBox="0 0 16 16">
+                                <path
+                                    d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0" />
+                                <path
+                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                            </svg>
+                            <div class="card-body">
+
+                                <h4 class="card-text">Scheduling</h4>
+                                <p class="card-text-regular">Automated booking, timezone detection, and calendar
+                                    sync with
+                                    Google and Outlook.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mb-3 mb-sm-0 pb-4">
+                        <div class="card h-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                class="bi bi-clipboard-heart pt-1 ps-3" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M5 1.5A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5zm5 0a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z" />
+                                <path
+                                    d="M3 1.5h1v1H3a1 1 0 0 0-1 1V14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V3.5a1 1 0 0 0-1-1h-1v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2" />
+                                <path d="M8 6.982C9.664 5.309 13.825 8.236 8 12 2.175 8.236 6.336 5.31 8 6.982" />
+                            </svg>
+                            <div class="card-body">
+                                <h4 class="card-text">Digital EHR</h4>
+                                <p class="card-text-regular">Structure clinical notes, ICD-10 coding, and longitudinal
+                                    patient health records.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mb-3 mb-sm-0 pb-4">
+                        <div class="card h-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                class="bi bi-prescription pt-1 ps-3 " viewBox="0 0 16 16">
+                                <path
+                                    d="M5.5 6a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 1 0V9h.293l2 2-1.147 1.146a.5.5 0 0 0 .708.708L9 11.707l1.146 1.147a.5.5 0 0 0 .708-.708L9.707 11l1.147-1.146a.5.5 0 0 0-.708-.708L9 10.293 7.695 8.987A1.5 1.5 0 0 0 7.5 6zM6 7h1.5a.5.5 0 0 1 0 1H6z" />
+                                <path
+                                    d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v10.5a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 3 14.5V4a1 1 0 0 1-1-1zm2 3v10.5a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5V4zM3 3h10V1H3z" />
+                            </svg>
+                            <div class="card-body">
+                                <h4 class="card-text">ePrescriptions</h4>
+                                <p class="card-text-regular">Securely send prescriptions directly to pharmacies with
+                                    automated interactions check.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mb-3 mb-sm-0 pb-4">
+                        <div class="card h-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                class="bi bi-credit-card pt-1 ps-3" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1z" />
+                                <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z" />
+                            </svg>
+                            <div class="card-body">
+                                <h4 class="card-text">Payments</h4>
+                                <p class="card-text-regular">Intergrated billing, insurance claims processing, and
+                                    direct
+                                    patient payments.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 mb-3 mb-sm-0 pb-4">
+                        <div class="card h-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                class="bi bi-shield-lock pt-1 ps-3" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56" />
+                                <path
+                                    d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415" />
+                            </svg>
+                            <div class="card-body">
+                                <h4 class="card-text">Secure & Compliant</h4>
+                                <p class="card-text-regular">SOC2 Type II, HIPAA, and GDPR compliant with data residency
+                                    options.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!-- How it work -->
+        <section class="howItWork" id="howItWork">
+            <div class="container header">
+                <h1 class="text-center">Get started with MediCloud in 3 easy steps</h1>
+                <p class="text-center">Simple, supported, and designed to fit the way you work. From setup to go-live,
+                    we'll guide you every step so your practice sees value from day one. </p>
+            </div>
+            <div class="container ">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4">
+                        <div class="step-circle light fw-bold mx-auto">1</div>
+                        <h4 class="sign-up text-center">Sign Up</h4>
+                        <p class="text-center">Create your provider profile and customize your clinic branding.</p>
+                    </div>
+                    <div class="col-sm-12 col-md-4 mx-auto">
+                        <div class="step-circle light fw-bold">2</div>
+                        <h4 class="add-staff text-center">Add Staff</h4>
+                        <p class="text-center">Invite your team of doctors, specialists, and front-desk admins.</p>
+                    </div>
+                    <div class="col-sm-12 col-md-4 mx-auto">
+                        <div class="step-circle active fw-bold">3</div>
+                        <h4 class="add-staff text-center">Start Consults</h4>
+                        <p class="text-center">Invite your team of doctors, specialists, and front-desk admins.</p>
+                    </div>
+                    <div class="col-12 text-center mt-4 ">
+                        <a href="#" class="btn btn-custom fw-bold my-2">Get a demo</a>
+                        <a href="#" class="btn btn-outline-custom1 my-2">Take a Quick Tour</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Content -->
+        <section class=" content">
+            <div class="container pt-5">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-lg-7 text-center mb-4 mb-lg-0">
+                        <img src="image/about-img.png" class="img-fluid">
+                    </div>
+                    <div class="col-sm-12 col-lg-5">
+                        <h1 class="content">Crystal Clear Care</h1>
+                        <p class="content-p">Experience zero-latency video consultations designed for clinical accuracy.
+                            Share medical records and record sessions with one click.</p>
+                        <ul class="list-unstyled">
+                            <li class="d-flex align-items-center mb-2">
+                                <svg class="bi bi-check-circle-fill me-2" width="20" height="20" fill="green"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                </svg>
+                                <span>4K Resolution Video Support</span>
+                            </li>
+
+                            <li class="d-flex align-items-center mb-2">
+                                <svg class="bi bi-check-circle-fill me-2" width="20" height="20" fill="green"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                </svg>
+                                <span>Built-in AI Scribe for clinical notes</span>
+                            </li>
+
+                            <li class="d-flex align-items-center">
+                                <svg class="bi bi-check-circle-fill me-2" width="20" height="20" fill="green"
+                                    viewBox="0 0 16 16">
+                                    <path
+                                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                </svg>
+                                <span>Integrated vitals monitoring</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- testimonails -->
+        <section class="testimonails" id="testimonails">
+            <div class="container align-items-center">
+                <div class="testimonail-title">
+                    <h1 class="text-center">What success looks like with Tebra</h1>
+                    <p class="text-center">Our clients don't just work with us, they grow with us. Here's what a few of
+                        our satisfied customers had to say about their experience with MediCloud.</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-3 mb-sm-0 pb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <p class="card-text">"MediCloud transformed how I manage my pediatric practice. The
+                                    patient experience is seamless,
+                                    and my no-show rates dropped by 40%."</p>
+                                <div class="d-flex align-items-center mt-4">
+                                    <img src="image/ai-avatar-male-doctor.webp" alt="Doctor" class="rounded-circle me-3"
+                                        width="45" height="45">
+                                    <div>
+                                        <h5 class="mb-0 fw-bold">Dr. Sarah Jenkins</h5>
+                                        <p class="mb-0 text-secondary">Pediatrician</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-3 mb-sm-0 pb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <p class="card-text">"The HIPAA compliance and security were non-negotiable for my
+                                    clinic. MediCloud
+                                    delivered peace of mind and excellent UX."</p>
+                                <div class="d-flex align-items-center mt-4">
+                                    <img src="image/dr2.webp" alt="Doctor" class="rounded-circle me-3" width="45" height="45">
+                                    <div>
+                                        <h5 class="mb-0 fw-bold">Dr. Mark Thomson</h5>
+                                        <p class="mb-0 text-secondary">Cardiologist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-3 mb-sm-0 pb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <p class="card-text">"Scaling my mental health practice across state lines was only
+                                    possible because of
+                                    their robust licensing and scheduling tools."</p>
+                                <div class="d-flex align-items-center mt-4">
+                                    <img src="image/dr3.jpg" alt="Doctor" class="rounded-circle me-3" width="50" height="47">
+                                    <div>
+                                        <h5 class="mb-0 fw-bold">Dr. Rodriguez Elena</h5>
+                                        <p class="mb-0 text-secondary">Phychiatrist</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!-- Pricing -->
+        <section class="price py-5">
+            <div class="container align-items-center">
+                <div class="testimonail-title">
+                    <h1 class="text-center text-secondary">Flexible Plans for Every Sales</h1>
+                    <p class="text-center text-secondary">Everything you need to provide top-tier care from anywhere in
+                        the world.</p>
+                </div>
+                <div class="row mx-5">
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-3 mb-sm-0 pb-4 ">
+                        <div class="card starter-card" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class="card-text fs-5 fw-semibold">STARTER</p>
+                                <div class="d-flex align-items-end">
+                                    <span class="display-5 fw-bold">$49</span>
+                                    <span class="fs-5">/mo</span>
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li class="list mt-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green"
+                                            class="bi bi-check-lg" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                                        </svg>
+                                        <span>1 Provider</span>
+                                    </li>
+                                    <li class="list mt-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green"
+                                            class="bi bi-check-lg" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                                        </svg>
+                                        <span>Unlimited Consultaions</span>
+                                    </li>
+                                    <li class="list mt-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green"
+                                            class="bi bi-check-lg" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                                        </svg>
+                                        <span>Basic EHR</span>
+                                    </li>
+                                    <li class="list mt-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green"
+                                            class="bi bi-check-lg" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                                        </svg>
+                                        <span>AI Note Assistant</span>
+                                    </li>
+                                </ul>
+                                <div class="select-plan-btn">
+                                    <button type="button" class="btn btn-outline-primary-custom ">Select Plan</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-3 mb-sm-0 pb-4 ">
+                        <div class="card border-primary-custom mb-3 mt-4" style="max-width: 18rem;">
+                            <div class="card-header">MOST POPULAR</div>
+                            <div class="card-body text-primary">
+                                <h5 class="card-title text-black fw-semibold">PROFESSIONAL</h5>
+                                <div class="d-flex align-items-end">
+                                    <span class="display-5 fw-bold text-black">$129</span>
+                                    <span class="fs-5 text-black">/mo</span>
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li class="list mt-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange"
+                                            class="bi bi-check-lg" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                                        </svg>
+                                        <span class="text-black">Up to 5 Provider</span>
+                                    </li>
+                                    <li class="list mt-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange"
+                                            class="bi bi-check-lg" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                                        </svg>
+                                        <span class="text-black">Full EHR & ePrescriptions</span>
+                                    </li>
+                                    <li class="list mt-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange"
+                                            class="bi bi-check-lg" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                                        </svg>
+                                        <span class="text-black">Custom Branding</span>
+                                    </li>
+                                    <li class="list mt-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange"
+                                            class="bi bi-check-lg" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                                        </svg>
+                                        <span class="text-black">AI Clinical Assistant</span>
+                                    </li>
+                                </ul>
+                                <div class="get-start-btn">
+                                    <button type="button" class="btn btn-custom">Get Started</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4 mb-3 mb-sm-0 pb-4 ">
+                        <div class="card starter-card" style="width: 18rem;">
+                            <div class="card-body">
+                                <p class="card-text fs-5 fw-semibold">ENTERPRISE</p>
+                                <div class="d-flex align-items-end">
+                                    <span class="display-5 fw-bold">CUSTOM</span>
+                                </div>
+                                <ul class="list-unstyled">
+                                    <li class="list mt-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green"
+                                            class="bi bi-check-lg" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                                        </svg>
+                                        <span>Unlimited Provider</span>
+                                    </li>
+                                    <li class="list mt-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green"
+                                            class="bi bi-check-lg" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                                        </svg>
+                                        <span>Dedicated Success Manager</span>
+                                    </li>
+                                    <li class="list mt-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green"
+                                            class="bi bi-check-lg" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                                        </svg>
+                                        <span>API & Webhook Access</span>
+                                    </li>
+                                    <li class="list mt-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="green"
+                                            class="bi bi-check-lg" viewBox="0 0 16 16">
+                                            <path
+                                                d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z" />
+                                        </svg>
+                                        <span>On-Prem Data Hosting</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+        </section>
+        <!-- FAQ -->
+        <section class="FAQ" id="faq">
+            <div class="container mx-5 py-7">
+                <h1 class="text-center">Frequently Asked Questions</h1>
+                <p class="text-center">Simple, supported, and designedto fit the way you work. From setup to go-live,
+                    we'll guide you every step so your practice sees value from day one.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-md-6 col-lg-8 py-2">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#question1">
+                                    Is MediCloud HIPAA compliance?
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="question1" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p><br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-8 py-2">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#question2">
+                                    Do patient need to download an app?
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="question2" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p><br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-8 py-2">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#question3">
+                                    How does billing and payment work?
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="question3" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p><br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-8 py-2">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#question4">
+                                    Can I intergrate my current EHR?
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="question4" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <p><br></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <section class="footer">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-3 text-white px-4 ">
+                        <h2 class=" fw-bold fs-4">MediCloud</h2>
+                        <p class=" text-light ">Empowering healthcare providers with modern,
+                            secure, and intuitive
+                            digital
+                            clinic tools.</p>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 text-white px-4 ">
+                        <h2 class=" fw-bold fs-4">Product</h2>
+                        <ul class="list-unstyled  ">
+                            <li><a href="#"
+                                    class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Telehealth
+                                    Video</a></li>
+                            <li><a href="#"
+                                    class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Patient
+                                    Portal</a></li>
+                            <li><a href="#"
+                                    class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Smart
+                                    Billing</a></li>
+                            <li><a href="#"
+                                    class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">ePrescriptions</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 text-white px-4">
+                        <h2 class=" fw-bold fs-4">Company</h2>
+                        <ul class="list-unstyled ">
+                            <li><a href="#"
+                                    class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">About
+                                    Us</a></li>
+                            <li><a href="#"
+                                    class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Career</a>
+                            </li>
+                            <li><a href="#"
+                                    class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Career</a>
+                            </li>
+                            <li><a href="#"
+                                    class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Press
+                                    Kit</a></li>
+                            <li><a href="#"
+                                    class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Security</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-3 text-white px-4">
+                        <h2 class=" fw-bold fs-4">Legal</h2>
+                        <ul class="list-unstyled ">
+                            <li><a href="#"
+                                    class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Privacy
+                                    Policy</a></li>
+                            <li><a href="#"
+                                    class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">Terms
+                                    of Service</a></li>
+                            <li><a href="#"
+                                    class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">HIPAA
+                                    compliance</a></li>
+                            <li><a href="#"
+                                    class="link-light link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover">GDPR</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr class="mt-5 text-white">
+                    <div class="col-md-6 col-lg-8 text-light">
+                         <p>@2026 MediCloud. HIPAA Compliance & Secure</p>
+                         <p>All rights reserved by <b>Codescandy</b>  • Distributed by <b>ThemeWagon</b></p>
+                    </div>
+                    <div class="col-md-6 col-lg-4 text-light">
+                        <p class="text-end">System status : <b>Operational</b></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+            integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
