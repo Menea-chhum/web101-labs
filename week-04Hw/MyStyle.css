@@ -1,0 +1,136 @@
+body {
+    margin : 0;
+    font-family: Arial;
+    background-color: #f3f3f3;
+}
+header {
+    background-color: #203864;
+    padding : 1rem;
+}
+header p{
+    display : inline;
+    font-size: 1rem;
+    font-weight: bold;
+}
+header ul{
+    display: inline;
+    margin-left: 55rem;
+}
+header li{
+    display :inline;    /*puts list on the same line*/
+    margin-left: 2rem;  /*pushes it toward the right*/
+}
+header a{
+    color: white;
+    text-decoration: none;   /*remove the underline */
+}
+/* main{
+    text-align: center;
+}
+h1 {
+    padding : 5rem;
+    margin :0;
+}
+.welcome {
+    padding: 5rem 1.25rem;
+    background: linear-gradient(90deg,rgba(4, 56, 128, 1) 0%, rgba(21, 13, 166, 1) 0%, rgba(28, 134, 156, 1) 60%);
+}
+.welcome  h1{
+    margin-top: 0.1rem;
+    margin-bottom: 1rem;
+}
+.welcome p{
+    margin-bottom: 1.5rem;
+}
+main a {
+    background-color: #32ff00;
+    color : black;
+    padding : 1rem 1rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+} */
+.welcome {
+    /* background: linear-gradient(90deg,rgba(4, 56, 128, 1) 0%, rgba(21, 13, 166, 1) 0%, rgba(28, 134, 156, 1) 60%); */
+   /* fallback for old browsers */
+
+     /* background-image: linear-gradient(to right, #021B79, #0575E6); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background-image: linear-gradient(to right, #0e6680, #0e6681, #0e6683, #0f6684, #106685, #126786, #146888, #166989, #1a6b8c, #1d6e8e, #207091, #237394); */
+    /* background-image: linear-gradient(to right, #204057, #264c67, #2c5877, #326488, #387199); */
+    text-align: center;
+    padding: 4.3rem 1.05rem;
+    color : white;
+    background-image: linear-gradient(to right, #2a5298, #1e3c72); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.welcome h1 {
+    margin : 0;
+    font-size: 3.125rem;
+}
+/* .welcome p{
+    margin-top: 1.25rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+} */
+.welcome a {
+    background-color: #33ff00;
+    color : black;
+    text-decoration: none;
+    padding : 1rem 1.875rem;
+    border-radius: 0.3rem;
+    display: inline-block;
+    font-weight: bold;
+}
+main h2{
+    color:#1e3c72;
+    padding-left:14.5rem;
+}
+.card-container{
+    padding-left: 14.5rem;
+}
+.card-container h3{
+    color:#1e3c72;
+}
+.card{
+    background-color: white;
+    margin : 0.5rem;
+    padding:  1.5rem 1rem;
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    display: inline-block;
+    width : 16rem;
+    height : auto;
+    text-align: center;
+}
+.card-container p {
+    font-size: 1rem;
+}
+.about-this-course p {
+    padding-left:14.5rem;
+    font-size: 1rem;
+}
+.form {
+    padding-left: 14.5rem;
+}
+.form label{
+    color:#1e3c72;
+    font-weight: bold;
+}
+.form-group{
+    margin-bottom: 1rem;
+}
+button{
+    background-color: #33ff00;
+    border-radius: 0.3rem;
+    font-weight: bold;
+    padding : 1rem 1.875rem;
+    color:black;
+}
+footer{
+    background-color: #203864 ;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem ;
+    color : white;
+}
+#icon {
+    font-size: 2.5rem;
+}
