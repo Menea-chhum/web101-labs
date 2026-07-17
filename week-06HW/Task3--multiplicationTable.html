@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table Generator</title>
+</head>
+
+<body style="background-color:rgb(214, 233, 250);
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             font-family:'Segor UI', sans-serif;">
+    <div class="card">
+        <h2>Multiplication Table Generator</h2>
+        <input type="number" id="inputNum" placeholder="Enter a number" style="block-size: 1.7rem;">
+        <button id="btn" onclick="generateTable()" style="background-color: navy;
+                                                          block-size: 2rem;
+                                                          border:none;
+                                                          border-radius: 0.4rem;
+                                                          padding:0.5rem;
+                                                          color :white;
+                                                          font-weight: bolder;">Generate </button>
+        <div id="display"></div>
+    </div>
+
+    <script>
+        function generateTable() {
+            const inputNum = Number(document.getElementById("inputNum").value);
+            
+            let result = `
+                <table border='2'  >
+                    <tr style="background-color:navy; color:white; font-weight:bold;">
+                        <th style="width:100px;">Expression</th>
+                        <th style="width:100px;">Result</th>
+                    </tr>
+                    `;
+
+            for (let i = 1; i <= 10; i++) {
+
+                let color;
+
+                if(i % 2 == 1)
+            {
+                color = "white";
+            }
+            else {color ="#C0E2FA";} 
+
+                result += `
+                    <tr style="background-color:${color}; text-align:center; ">
+                        <td>${inputNum} × ${i}</td>
+                        <td>${inputNum * i}</td>
+                    </tr>`;
+            }
+
+            result += "</table>";
+
+            document.getElementById("display").innerHTML = result;
+        }
+    </script>
+
+</body>
+
+</html>

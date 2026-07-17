@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Score</title>
+</head>
+
+<body style="background-color:lightgrey;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             font-family:'Segor UI', sans-serif;">
+    <div class="card" style="background-color: white;
+                             width:25rem;
+                             border-radius: 1.3rem;
+                             padding:1.5rem;
+                             margin:1.5rem;
+                             text-align: center;
+                             box-shadow:0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <h2>Student Score</h2>
+        <p id="list"></p>
+        <p>Highest: <span id="high">-</span> | Lowest: <span id="low">-</span> | Average: <span id="avg">-</span></p>
+
+        <input type="number" id="scoreInput" placeholder="Enter score" style="block-size: 1.7rem;">
+        <button onclick="addScore()" style="background-color: navy; 
+                                color:white; 
+                                border-color:rgb(7, 28, 167);
+                                block-size: 2rem; 
+                                padding:0rem 2rem;
+                                font-weight: bold;
+                                font-size: 0.9rem;">Add Score</button>
+    </div>
+
+    <script>
+        let scores = [];
+        function addScore() {
+            let input = Number(document.getElementById("scoreInput").value);
+            let result = document.getElementById("list");
+
+            if (isNaN(input) || input < 0 || input > 100) {
+                alert("Please enter a valid score (0–100).");
+                return;
+            }
+
+            if (input >= 90) {
+                color = "green";
+            }
+            else if (input >= 80) {
+                color = "deeppink";
+            }
+            else if (input >= 70) {
+                color = "purple";
+            }
+            else if (input >= 60) {
+                color = "orange";
+            }
+            else if (input >= 50) {
+                color = "blue";
+            }
+            else { color = "red"; }
+
+            scores.push(input);
+
+            let highest = Math.max(...scores);
+            let lowest = Math.min(...scores);
+            let total = scores.reduce((sum, val) => sum + val, 0);
+            let average = (total / scores.length).toFixed(2);
+
+            document.getElementById("list").innerHTML +=
+                `<span style="color:${color}">${input}</span><br>`;
+            document.getElementById("high").innerHTML = highest;
+            document.getElementById("low").innerHTML = lowest;
+            document.getElementById("avg").innerHTML = average;
+
+            document.getElementById("scoreInput").value = "";
+
+           
+        }
+    </script>
+
+
+</body>
+
+</html>

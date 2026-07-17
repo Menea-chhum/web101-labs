@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+</head>
+
+<body style="background-color: #F6E1FA;
+             align-items: center;
+             justify-content: center;
+             padding-top:5rem;
+             display:flex; ">
+    <div class="card" style="background-color: white;
+                             width:25rem;
+                             border-radius: 1.3rem;
+                             padding:2rem;
+                             text-align: center;
+                             box-shadow:0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <img src="download.jpg" width="70" height="70" alt="profile" style="border-radius:1.5rem;">
+        <h2>Chhum Menea</h2>
+        <h4>Information Technology Engineering</h4>
+        <button id="btn" style="background-color: #641296; 
+                                color:white; 
+                                border:none; 
+                                border-radius: 0.5rem; 
+                                block-size: 2rem; 
+                                font-weight:bold;
+                                padding:0.06rem 1.5rem;" onclick="toggleText()">Show more</button> <br><br>
+        <span id="moreText">I am a year 2 student at RUPP. I love web development and matcha latte.</span>
+
+    </div>
+
+    <script>
+        function toggleText()
+        {
+            const moreText = document.getElementById("moreText");
+            const button = document.getElementById("btn");
+
+            const isHidden = moreText.style.display === "none";
+
+            moreText.style.display = isHidden ? "inline" : "none";
+            button.innerHTML = isHidden ? "Show less" : "Show more";
+        }
+    </script>
+    <!-- <script>
+        function toggleText() {
+            const moreText = document.getElementById("moreText");
+            const button = document.getElementById("btn");
+
+            const isHidden = moreText.style.display === "none";
+
+            if (isHidden) {
+                moreText.style.display = "inline";
+                button.innerHTML = "Show less";
+            } else {
+                moreText.style.display = "none";
+                button.innerHTML = "Show more";
+            }
+        }
+    </script> -->
+
+</body>
+
+</html>

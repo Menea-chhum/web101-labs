@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Task</title>
+</head>
+
+<body style="background-color:#FADEE3;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             font-family:'Segor UI', sans-serif;">
+    <div class="card" style="background-color: white;
+                             width:25rem;
+                             border-radius: 1.3rem;
+                             padding:1.5rem;
+                             text-align: center;
+                             box-shadow:0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <h2>My Tasks</h2>
+        <input type="text" id="taskInput" placeholder="New task...." style="block-size: 1.7rem;">
+        <button id="addTask" style="background-color:deeppink; 
+                                color:white; 
+                                border-color:rgb(237, 80, 127);
+                                block-size: 2rem; 
+                                padding:0rem 2rem;
+                                font-weight: bold;
+                                font-size: 0.9rem;"> Add </button>
+
+        <ul id="taskList"></ul>
+        <p id="TaskDone" style="font-weight: bold;">0 of 0 tasks done</p>
+    </div>
+
+    <script>
+        const addBtn = document.getElementById("addTask");
+        const taskInput = document.getElementById("taskInput");
+        const taskList = document.getElementById("taskList");
+
+        function addTask() {
+            const task = taskInput.value.trim();
+
+            if (task) {
+                createTaskElement(task);
+                taskInput.value = ''; //clear input field
+            }
+            else {
+                alert('Please enter a task!');
+            }
+        }
+
+        addBtn.addEventListener('click', addTask);
+
+        let totalTasks = 0;
+
+        function createTaskElement(task) {
+            const listItem = document.createElement('li');
+            listItem.textContent = task;
+
+            listItem.style.backgroundColor = "#FED8DF";
+            listItem.style.padding = "10px";
+            listItem.style.margin = "10px 0px";
+            listItem.style.borderRadius = "8px";
+            listItem.style.display = "flex";
+            listItem.style.justifyContent = "space-between";
+            listItem.style.alignItems = "center";
+            listItem.style.listStyleType = "none";
+            listItem.style.blockSize = "2rem";
+
+            const deleteBtn = document.createElement("button");
+            deleteBtn.textContent = "❌";
+
+            deleteBtn.style.cursor = "pointer";
+            deleteBtn.style.backgroundColor = "#FED8DF";
+            deleteBtn.style.border = "none";
+            listItem.appendChild(deleteBtn);
+
+            taskList.appendChild(listItem);
+            totalTasks++;
+            document.getElementById("TaskDone").textContent =
+                "0 of " + totalTasks + " tasks done";
+
+            deleteBtn.addEventListener('click', function () {
+                taskList.removeChild(listItem);
+
+                totalTasks--;
+
+                document.getElementById("TaskDone").textContent =
+                    "0 of " + totalTasks + " tasks done";
+            })
+        }
+    </script>
+</body>
+
+</html>

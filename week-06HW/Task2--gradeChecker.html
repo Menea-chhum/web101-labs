@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Checker</title>
+</head>
+
+<body style="background-color:#D4FADE;
+             align-items: center;
+             justify-content: center;
+             padding-top:5rem;
+             display:flex;
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    <div class="card" style="background-color: white;
+                             width:25rem;
+                             border-radius: 1.3rem;
+                             padding:1rem;
+                             text-align: center;
+                             box-shadow:0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <h2>Grade Checker</h2>
+        <input type="number" id="inputNum" placeholder="Enter your score (0-100)"
+            style="block-size: 2rem; padding:0rem 2rem;">
+        <button id="btn" onclick="CalculateGrade()" style="background-color: darkgreen; 
+                                color:white; 
+                                border-color:lightgreen;
+                                block-size: 2rem; 
+                                padding:0rem 2rem;
+                                font-weight: bold;
+                                font-size: 0.9rem;">Check</button>
+        <p id="result" style="font-weight: bold;"></p>
+    </div>
+
+    <script>
+        function CalculateGrade() {
+            const inputNum =  Number(document.getElementById("inputNum").value);
+            const result = document.getElementById("result");
+
+            if (inputNum > 100 || inputNum < 0) {
+                result.textContent = 'Please enter a valid score between 0 to 100.';
+                result.style.color = "red";
+            }
+            else if (inputNum >= 90) {
+                result.textContent = `Score ${inputNum} - Grade A`;
+                result.style.color = "green";
+            }
+            else if (inputNum >= 80) {
+                result.textContent = `Score ${inputNum} - Grade B`;
+                result.style.color = "deeppink";
+            }
+            else if (inputNum >= 70 ) {
+                result.textContent = `Score ${inputNum} - Grade C`;
+                result.style.color = "purple";
+            }
+            else if (inputNum >= 60 ) {
+                result.textContent = `Score ${inputNum} - Grade D`;
+                result.style.color = "orange";
+            }
+            else if (inputNum >= 50 ) {
+                result.textContent = `Score ${inputNum} - Grade E`;
+                result.style.color = "blue";
+            }
+            else 
+            { 
+                result.textContent = `Score ${inputNum} - Grade F`; 
+                result.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
