@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="wproductNameth=device-wproductNameth, initial-scale=1.0">
+    <title>ITE Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="ITEEShopStyle.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1">ITE Shop</span>
+            <button type="button" class="btn">
+                Cart <span id="badge" class="badge ">0</span>
+            </button>
+        </div>
+    </nav>
+    <!-- Card -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Keyboard</h5>
+                                <p class="card-text">$25.55</p>
+                                <button class="addToCartBtn" onclick="addToCart('Keyboard',25.55)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Mouse</h5>
+                                <p class="card-text">$12.00</p>
+                                <button class="addToCartBtn" onclick="addToCart('Mouse',12.00)">Add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Monitor</h5>
+                                <p class="card-text">$149.99</p>
+                                <button class="addToCartBtn" onclick="addToCart('Monitor', 149.99)">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">USB Hub</h5>
+                                <p class="card-text">$18.75</p>
+                                <button class="addToCartBtn" onclick="addToCart('USB Hub' , 18.75)">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Your cart -->
+            <div class=" col-lg-2 ">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                        Your Cart
+                    </div>
+                    <ul id="cart" class="list-group list-group-flush">
+                        <li class="list-group-item">Cart is empty</li>
+                        <li class="list-group-item fw-bold">Total : $0.00</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+    <script>
+        let cart = [];
+
+        function addToCart(name, price) {
+            let found = false;
+
+            for (let i = 0; i < cart.length; i++) {
+                if (cart[i].name === name) {
+                    cart[i].quantity++;
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) {
+                cart.push({
+                    name: name,
+                    price: price,
+                    quantity: 1
+                });
+            }
+            displayCart();
+        }
+
+        function displayCart() {
+            let list = document.getElementById('cart');
+            let badge = document.getElementById('badge');
+
+            list.innerHTML = '';
+
+            let total = 0;
+            let totalItems = 0;
+
+            for (let i = 0; i < cart.length; i++) {
+                total += cart[i].price * cart[i].quantity;
+                totalItems += cart[i].quantity;
+
+                list.innerHTML += `<li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span>${cart[i].name} x${cart[i].quantity} </span>
+                        <div class="d-flex align-items-center">
+                            $${(cart[i].price * cart[i].quantity)}
+                    <button type="button" class="btn btn-outline-danger " onclick="removeItem(${i})">-</button></div>
+                    </li>` ;
+            }
+
+            list.innerHTML += `<li class="list-group-item fw-bold">Total : $${total.toFixed(2)}</li>`;
+            badge.innerHTML = totalItems;
+
+            if (cart.length === 0) {
+                list.innerHTML = `
+                    <li class="list-group-item">Cart is empty</li>
+                    <li class="list-group-item fw-bold">Total : $0.00</li>`;
+                badge.innerHTML = 0;
+                return;
+            }
+
+        }
+
+        function removeItem(index) {
+
+            cart.splice(index, 1);
+
+            displayCart();
+
+        }
+    </script>
+</body>
+
+</html>

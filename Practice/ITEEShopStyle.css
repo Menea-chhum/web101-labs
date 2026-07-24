@@ -1,0 +1,35 @@
+.navbar{
+    background-color: #0C5875;
+}
+.navbar-brand,
+.btn{
+    color : white;
+    font-weight: bold;
+}
+.badge{
+    background-color: #f1bf34;
+}
+.container{
+    margin-top: 2rem;
+    margin-left :0;
+}
+.card-title{
+    font-weight: bold;
+}
+.addToCartBtn{
+    background-color: #0C5875;;
+    color:white;
+    border:none;
+    border-radius: 0.2rem;
+    block-size: 2rem;
+    align-items: center;
+
+}
+.card-header{
+    background-color: #0C5875;
+    color: white;
+    font-weight: bold;
+}
+.btn-outline-danger{
+    color: red;
+}
